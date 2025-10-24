@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Report Lost Item</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand">Lost & Found</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="all-items.html">View All</a>
+        <a href="login.html" id="nav-auth">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h2>Report Lost Item</h2>
+
+    <form id="reportForm" class="card form-card">
+      <input type="hidden" id="itemType" value="lost" />
+      <label>Item name
+        <input id="itemName" type="text" required />
+      </label>
+      <label>Location (text)
+        <input id="itemLocation" type="text" required />
+      </label>
+      <label>Description
+        <textarea id="itemDescription" rows="4" required></textarea>
+      </label>
+      <label>Contact email or phone
+        <input id="itemContact" type="text" required />
+      </label>
+      <label>Photo (optional)
+        <input id="itemImage" type="file" accept="image/*" />
+      </label>
+      <div class="btn-row">
+        <button type="submit" class="btn">Submit</button>
+        <a class="btn outline" href="all-items.html">Cancel</a>
+      </div>
+      <p id="reportMessage" class="muted"></p>
+    </form>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
