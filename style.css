@@ -1,0 +1,54 @@
+:root{
+  --primary:#1752ff;
+  --muted:#6b7280;
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --radius:10px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg); color:#111;
+}
+.container{max-width:980px;margin:0 auto;padding:20px;}
+
+.site-header{background:var(--primary);color:#fff;padding:14px 0;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand{margin:0;font-size:20px}
+.site-header nav a{color:#fff;margin-left:14px;text-decoration:none;font-weight:600}
+
+.hero{padding:40px 0;text-align:center}
+.hero h2{margin:8px 0 12px;font-size:28px}
+.btn, .btn-outline, .btn.outline{
+  display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;
+}
+.btn{background:var(--primary);color:#fff;border:none}
+.btn.outline, .btn.outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+
+.features{display:flex;gap:16px;margin-top:20px;flex-wrap:wrap}
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 2px 8px rgba(16,24,40,0.04);flex:1;min-width:220px}
+
+.narrow{max-width:640px;margin:30px auto}
+
+.form-card input, .form-card textarea, .form-card select{
+  width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #e6e9ef;
+}
+.form-card label{display:block;font-weight:600;margin-top:8px}
+.form-card .btn-row{display:flex;gap:8px;align-items:center}
+
+.muted{color:var(--muted);font-size:0.95rem}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:18px}
+
+.item-card{background:var(--card);padding:12px;border-radius:8px;display:flex;gap:12px;align-items:flex-start}
+.item-card img{width:86px;height:86px;object-fit:cover;border-radius:6px}
+.item-card h3{margin:0 0 6px 0;font-size:16px}
+.item-card p{margin:0;color:var(--muted)}
+
+.site-footer{padding:18px 0;text-align:center;background:transparent;margin-top:28px}
+
+@media (max-width:640px){
+  .features{flex-direction:column}
+  .site-header .container{flex-direction:column;gap:12px}
+}
